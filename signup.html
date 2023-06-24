@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        background-image: url("blake-wisz-Xn5FbEM9564-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        /*background-color: #fff;*/
+        background: transparent;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h2 {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .form-container {
+        margin-top: 50px;
+      }
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      .btn-container {
+        text-align: center;
+      }
+
+      .btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 55px;
+        padding: 10px 20px;
+        width: 25%;
+        background-color: #cd1329;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ece8e8;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Signup</h2>
+      <form class="form-container">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter the email here"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter the username here"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter the password here"
+            required
+          />
+        </div>
+        <div class="btn-container">
+          <button class="btn" type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
