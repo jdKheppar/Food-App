@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup Page</title>
     <style>
       body {
@@ -68,6 +71,41 @@
       .btn:hover {
         background-color: #ece8e8;
         color: black;
+      }
+      @media (max-width: 480px) {
+        /* Adjustments for mobile devices */
+        .container {
+          max-width: 100%;
+          padding: 20px;
+        }
+
+        .container h2 {
+          font-size: 24px;
+          margin-bottom: 45px;
+        }
+
+        .form-group label {
+          font-size: 14px;
+        }
+
+        .form-group input {
+          font-size: 14px;
+        }
+
+        .btn {
+          font-size: 14px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 55px;
+          padding: 10px 20px;
+          width: 25%;
+          background-color: #cd1329;
+          color: #fff;
+          border: none;
+          border-radius: 20px;
+          cursor: pointer;
+        }
       }
     </style>
   </head>
