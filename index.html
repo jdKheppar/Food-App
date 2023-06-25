@@ -19,7 +19,7 @@
         Here!
       </div>
       <div class="authentication">
-        <button class="signin">Sign in</button>
+        <button class="signin" id="loginBtn">Sign in</button>
         <button class="register" id="registerBtn">Register</button>
       </div>
     </div>
@@ -29,6 +29,11 @@
         .getElementById("registerBtn")
         .addEventListener("click", function () {
           window.location.href = "signup.html";
+        });
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", function () {
+          window.location.href = "login.html";
         });
     </script>
   </body>

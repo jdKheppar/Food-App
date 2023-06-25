@@ -65,3 +65,6 @@ body {
 .register:hover {
   cursor: pointer;
 }
+.signin:hover {
+  cursor: pointer;
+}

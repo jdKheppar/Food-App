@@ -9,7 +9,7 @@
       body {
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
-        background-image: url("joanna-kosinska-7ACuHoezUYk-unsplash.jpg");
+        background-image: url("./login.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -72,6 +72,16 @@
         background-color: #ece8e8;
         color: black;
       }
+      .form-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .form-links a {
+        color: white;
+        text-decoration: underline;
+      }
       @media (max-width: 480px) {
         /* Adjustments for mobile devices */
         .container {
@@ -106,28 +116,28 @@
           border-radius: 20px;
           cursor: pointer;
         }
+        .form-links {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 20px;
+        }
+
+        .form-links a {
+          margin-bottom: 10px;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h2>Signup</h2>
+      <h2>Welcome Back</h2>
       <form class="form-container">
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter the email here"
-            required
-          />
-        </div>
         <div class="form-group">
           <label for="username">Username:</label>
           <input
             type="text"
             id="username"
-            placeholder="Enter the username here"
+            placeholder="Enter the username or email"
             required
           />
         </div>
@@ -139,9 +149,13 @@
             placeholder="Enter the password here"
             required
           />
+          <div class="form-links">
+            <a href="signup.html">Sign up</a>
+            <a href="forgot-password.html">Forgot password?</a>
+          </div>
         </div>
         <div class="btn-container">
-          <button class="btn" type="submit">Register</button>
+          <button class="btn" type="submit">Login</button>
         </div>
       </form>
     </div>
