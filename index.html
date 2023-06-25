@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Start Screen</title>
-  </head>
-  <body>
-    <div class="container">
-      <img
-        class="img-logo"
-        src="logo.png"
-        alt="plate containing noodles photo"
-      />
-      <div class="subText">
-        Order your favorite Meals<br />
-        Here!
-      </div>
-      <div class="authentication">
-        <button class="signin" id="loginBtn">Sign in</button>
-        <button class="register" id="registerBtn">Register</button>
-      </div>
-    </div>
 
-    <script>
-      document
-        .getElementById("registerBtn")
-        .addEventListener("click", function () {
-          window.location.href = "signup.html";
-        });
-      document
-        .getElementById("loginBtn")
-        .addEventListener("click", function () {
-          window.location.href = "login.html";
-        });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Start Screen</title>
+</head>
+
+<body>
+  <div class="container">
+    <img id="logo" class="img-logo" src="logo.png" alt="plate containing noodles photo" />
+    <div class="subText">
+      Order your favorite Meals<br />
+      Here!
+    </div>
+    <div class="authentication">
+      <button class="signin" id="loginBtn">Sign in</button>
+      <button class="register" id="registerBtn">Register</button>
+    </div>
+  </div>
+
+  <script>
+    document
+      .getElementById("registerBtn")
+      .addEventListener("click", function () {
+        window.location.href = "signup.html";
+      });
+    document
+      .getElementById("loginBtn")
+      .addEventListener("click", function () {
+        window.location.href = "login.html";
+      });
+    document
+      .getElementById("logo")
+      .addEventListener("click", function () {
+        window.location.href = "home.html";
+      });
+  </script>
+</body>
+
 </html>

@@ -1,6 +1,7 @@
 body {
   background-color: white;
 }
+
 .container {
   background-color: white;
   display: flex;
@@ -8,14 +9,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .foodienator {
   color: black;
   font-size: 33px;
   font-family: Poppins;
   font-weight: 800;
   word-wrap: break-word;
-  text-align: center; /* Added */
-  margin-top: 33px; /* Added */
+  text-align: center;
+  /* Added */
+  margin-top: 33px;
+  /* Added */
 }
 
 .subText {
@@ -24,17 +28,22 @@ body {
   font-family: Poppins;
   font-weight: 300;
   word-wrap: break-word;
-  text-align: center; /* Added */
-  margin-top: 33px; /* Added */
+  text-align: center;
+  /* Added */
+  margin-top: 33px;
+  /* Added */
 }
+
 .img-logo {
   height: 300px;
   width: 200px;
 }
+
 .authentication {
   display: flex;
   margin-top: 144px;
 }
+
 .signin {
   width: 180px;
   height: 60px;
@@ -62,9 +71,15 @@ body {
   font-weight: 700;
   word-wrap: break-word;
 }
+
 .register:hover {
   cursor: pointer;
 }
+
 .signin:hover {
+  cursor: pointer;
+}
+
+#logo:hover {
   cursor: pointer;
 }

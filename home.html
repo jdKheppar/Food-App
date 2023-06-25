@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .homeContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-home-header {
+            margin-top: 20px;
+        }
+
+        #top-list {
+            margin-right: 50px;
+        }
+
+        #top-search {
+            margin-left: 240px;
+        }
+
+        .workPlace {
+            display: flex;
+            align-items: center;
+        }
+
+        #work {
+            height: 28px;
+            margin-left: 5px;
+        }
+
+        #map {
+            margin-top: 9px;
+        }
+
+        #choose-p {
+            margin-top: 3px;
+        }
+
+        #icons {
+            display: flex;
+        }
+
+        .icon-img {
+            margin-right: 45px;
+            border: 2px solid #ece8e8;
+            padding: 3px;
+        }
+
+        .icon-home-img {
+            margin-right: 45px;
+            border: 2px solid #22C7A9;
+        }
+
+        .foodItems {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item {
+            height: 220px;
+            width: 170px;
+            background-color: #ece8e8;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .items-img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+        }
+
+        .product-price {
+            color: #22C7A9;
+        }
+
+        .first2Items {
+            display: flex;
+        }
+
+        .second2Items {
+            display: flex;
+        }
+
+        .third2Items {
+            display: flex;
+        }
+
+        .items-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: white;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 10px 10px 50px 50px;
+            background: #22C7A9;
+            width: 360px;
+            height: 59px;
+            margin-top: 30px;
+        }
+
+        .left-text {
+            margin-right: 10px;
+        }
+
+        .right-text {
+            margin-left: 10px;
+        }
+
+        .items-button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="homeContainer">
+        <div class="top-home-header">
+            <img id="top-list" src="./assets/icons/Frame 15.svg" alt="Home first icon">
+            <img id="top-search" src="./assets/icons/Vector (4).svg" alt="search">
+        </div>
+        <div class="workPlace">
+            <img id="map" src="./assets/icons/map.svg" alt="map photo">
+            <h1 id="work">Work Place</h1>
+        </div>
+
+        <p id="choose-p">Choose your preferred meal</p>
+        <div class="icons">
+            <img class="icon-home-img" src="./assets/icons/Vector.svg" alt="home">
+            <img class="icon-img" src="./assets/icons/Vector (1).svg" alt="first">
+            <img class="icon-img" src="./assets/icons/Vector (2).svg" alt="vector 2">
+            <img class="icon-img" src="./assets/icons/Vector (3).svg" alt="3">
+        </div>
+        <div class="foodItems">
+            <div class="first2Items">
+                <div class="Cheeseburger item">
+                    <img class="items-img"
+                        src="https://images.pexels.com/photos/2282532/pexels-photo-2282532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="1">
+                    <p>Cheeseburger</p>
+                    <p class="product-price">$122</p>
+                </div>
+                <div class="Margherita-Pizza item">
+                    <img class="items-img"
+                        src="https://images.pexels.com/photos/6605214/pexels-photo-6605214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="2">
+                    <p>Margherita Pizza</p>
+                    <p class="product-price">$177</p>
+                </div>
+
+            </div>
+            <div class="second2Items">
+                <div class="Greek-Salad item">
+                    <img class="items-img"
+                        src="https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="3">
+                    <p>Greek Salad</p>
+                    <p class="product-price">$1234</p>
+                </div>
+                <div class="Spaghetti-Bolognese item">
+                    <img class="items-img"
+                        src="https://images.pexels.com/photos/6287534/pexels-photo-6287534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="4">
+                    <p>Spaghetti Bolognese</p>
+                    <p class="product-price">$342423</p>
+                </div>
+            </div>
+            <div class="third2Items">
+                <div class="California-Roll item">
+                    <img class="items-img"
+                        src="https://images.pexels.com/photos/7353389/pexels-photo-7353389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="3">
+                    <p>California-Roll</p>
+                    <p class="product-price">$3423</p>
+                </div>
+                <div class="BLT-Sandwich item">
+                    <img class="items-img"
+                        src="https://images.pexels.com/photos/16444393/pexels-photo-16444393/free-photo-of-studio-shot-of-a-sandwich-and-baked-potatoes-with-dipping-sauces-on-a-tray.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="4">
+                    <p>BLT Sandwich</p>
+                    <p class="product-price">$234234</p>
+                </div>
+            </div>
+        </div>
+        <button class="items-button">
+            <span class="left-text">3 items</span>
+            <span id="test" class="right-text">$142000.00</span>
+        </button>
+    </div>
+
+</body>
+
+</html>
