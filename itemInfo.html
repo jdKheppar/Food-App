@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Info</title>
+    <style>
+      .itemContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        /* align-items: center;
+        justify-content: center; */
+      }
+
+      .items-img {
+        height: 100%;
+        width: 100%;
+        margin: 10px;
+      }
+      .deliveri {
+        display: flex;
+        margin-left: 17px;
+      }
+      .deliveri-desc {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+      #clock-img {
+        height: 25px;
+        width: 25px;
+        margin-top: 20px;
+        padding: 10px;
+        border: 2px solid #c4c4c4;
+      }
+      #delivery-time-heading {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      #delivery-time-min {
+        font-weight: 400;
+        margin-top: 5px;
+      }
+      #aboutProdcut {
+        font-size: 18px;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+      #aboutDesc {
+        width: 100%;
+        height: 100%;
+        color: #888888;
+        font-size: 14px;
+        font-family: Poppins;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      .namePrice {
+        display: flex;
+        justify-content: space-between;
+      }
+      .product-price {
+        width: 90px;
+        height: 15px;
+        border: 20px solid #22c7a9;
+        background-color: #22c7a9;
+        border-top-left-radius: 20%;
+        border-bottom-left-radius: 20%;
+        color: white;
+      }
+      .itemIcons {
+        display: flex;
+        justify-content: space-between;
+      }
+      .plusminus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #two {
+        background-color: rgba(204, 204, 204, 0.31);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="itemContainer">
+      <div class="Cheeseburger item">
+        <img
+          class="items-img"
+          src="https://images.pexels.com/photos/2282532/pexels-photo-2282532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="1"
+        />
+      </div>
+      <div class="namePrice">
+        <h1>Cheese Burger</h1>
+        <p class="product-price">$12200.00</p>
+      </div>
+      <p id="aboutProduct">About this product</p>
+      <p id="aboutDesc">Crunchy beef burger with onion and lettuce</p>
+      <div class="deliveri">
+        <img
+          id="clock-img"
+          src="./assets/icons/Vector (5).svg"
+          alt="clock icon"
+        />
+        <div class="deliveri-desc">
+          <h4 id="delivery-time-heading">Delivery Time</h4>
+          <p id="delivery-time-min">25 minutes</p>
+        </div>
+      </div>
+      <div class="itemIcons">
+        <img src="./assets/icons/Vector (6).svg" alt="Heart" />
+        <div class="plusminus">
+          <img src="./assets/icons/Vector (7).svg" alt="minus icon" />
+          <p id="two">2</p>
+          <img src="./assets/icons/Vector (8).svg" alt="plus icon" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
