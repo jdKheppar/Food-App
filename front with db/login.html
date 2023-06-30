@@ -173,7 +173,7 @@
         </div>
       </div>
       <div class="btn-container">
-        <button id="submit-btn" class="btn" type="submit">LOGIN</button>
+        <button class="btn" type="submit">LOGIN</button>
       </div>
     </form>
   </div>
@@ -181,10 +181,68 @@
     document.getElementById("back-icon").addEventListener("click", function () {
       window.location.href = "index.html";
     });
-    document.getElementById("submit-btn").addEventListener("click", function () {
-      window.location.href = "home.html";
+    // Get references to the form and input fields
+    const form = document.querySelector('.form-container');
+    const usernameInput = document.querySelector('#username');
+    const passwordInput = document.querySelector('#password');
+
+    // Function to redirect the user
+    const redirectToHome = () => {
+      window.location.href = 'home.html';
+    };
+
+    // Function to display error message
+    const showError = (message) => {
+      const errorElement = document.createElement('p');
+      errorElement.textContent = message;
+      errorElement.style.color = 'red';
+      form.appendChild(errorElement);
+    };
+
+    // Event listener for form submission
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get the values from the input fields
+      const username = usernameInput.value;
+      const password = passwordInput.value;
+
+      // Create an object with the username and password
+      const credentials = {
+        username: username,
+        password: password,
+      };
+
+      // Send a POST request to the server
+      fetch('http://localhost:5001/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials),
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Login successful
+            console.log('Login successful');
+            redirectToHome(); // Redirect to home.html
+          } else if (response.status === 401) {
+            // Invalid username or password
+            console.error('Invalid username or password');
+            showError('Invalid username or password');
+          } else {
+            // Other errors
+            console.error('Error:', response.status);
+            showError('An error occurred. Please try again later.');
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          showError('An error occurred. Please try again later.');
+        });
     });
   </script>
+
 
 </body>
 

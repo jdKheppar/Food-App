@@ -322,9 +322,8 @@
         <div class="foodItems">
             <div class="Items">
                 <div class="Cheeseburger item" id="berger">
-
                     <h2 class="product-name">Salrah Ndb</h2>
-                    <p>Lorem ipsum dolor amet.</p>
+                    <p>Meat, bread, broth, spices</p>
                     <h3 class="product-price">122RM</h3>
                 </div>
                 <img class="items-img" src="./assets/images/Saltah-960x960.jpg.webp" alt="1" />
@@ -333,7 +332,7 @@
                 <div class="Margherita-Pizza item">
 
                     <h2 class="product-name">Mandi Ndb</h2>
-                    <p>Lorem ipsum dolor amet.</p>
+                    <p>Meat, fenugreek, vegetables, spices</p>
                     <h3 class="product-price">177RM</h3>
                 </div>
                 <img class="items-img" src="./assets/images/Mandi--960x960.jpg.webp" alt="2" />
@@ -343,7 +342,7 @@
                 <div class="Greek-Salad item">
 
                     <h2 class="product-name">Mutabaq Ndb</h2>
-                    <p>Lorem ipsum dolor amet.</p>
+                    <p>Rice, meat, tomatoes, spices</p>
                     <h3 class="product-price">1234RM</h3>
                 </div>
                 <img class="items-img" src="./assets/images/Mutabaq.jpg.webp" alt="3" />
@@ -352,7 +351,7 @@
                 <div class="Spaghetti-Bolognese item">
 
                     <h2 class="product-name">Zurbian Ndb</h2>
-                    <p>Lorem ipsum dolor amet.</p>
+                    <p>Dough, meat, vegetables, spices</p>
                     <h3 class="product-price">342423RM</h3>
                 </div>
                 <img class="items-img" src="./assets/images/Zurbian-960x540.jpg.webp" alt="4" />
@@ -362,7 +361,7 @@
                 <div class="California-Roll item">
 
                     <h2 class="product-name">Fahsha</h2>
-                    <p>Lorem ipsum dolor amet.</p>
+                    <p>butter, cream, spices, honey and dates</p>
                     <h3 class="product-price">3423RM</h3>
                 </div>
                 <img class="items-img" src="./assets/images/Fahsa-960x720.jpg.webp" alt="3" />
@@ -371,7 +370,7 @@
                 <div class="BLT-Sandwich item">
 
                     <h2 class="product-name">Randi</h2>
-                    <p>Lorem ipsum dolor amet.</p>
+                    <p>Rice, meat, spices, salt, oil</p>
                     <h3 class="product-price">234234RM</h3>
                 </div>
                 <img class="items-img"
@@ -390,7 +389,25 @@
         document.getElementById("home-icon").addEventListener("click", function () {
             window.location.href = "home.html";
         });
-        // Query parameters
+        // Make an HTTP request to the server
+        fetch('http://localhost:5001/cartItems')
+            .then(response => response.text())
+            .then(data => {
+                // Display the received data on the page
+                const jsonData = JSON.parse(data);
+                let productNamesArray = document.getElementsByClassName("product-name");
+                let productPricesArray = document.getElementsByClassName("product-price");
+                let productsrcArray = document.getElementsByClassName("items-img");
+                for (let i = 0; i < 6; i++) {
+                    productNamesArray[i].innerHTML = jsonData[i].product_name;
+                    productPricesArray[i].innerHTML = jsonData[i].product_price + "RM";
+                    productsrcArray[i].src = jsonData[i].product_img;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
         document.addEventListener("DOMContentLoaded", () => {
             const items = document.getElementsByClassName("Items");
 
@@ -411,12 +428,10 @@
                 });
             }
         });
-        document.getElementById("top-profile").addEventListener("click", function () {
-            window.location.href = "index.html";
-        });
         document.getElementById("signOut").addEventListener("click", function () {
             window.location.href = "index.html";
         });
+
     </script>
 </body>
 
